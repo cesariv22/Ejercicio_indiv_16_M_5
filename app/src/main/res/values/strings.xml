@@ -1,0 +1,14 @@
+<resources>
+
+        <string name="app_name">Conversor de Divisas</string>
+        <string name="select_currency">Seleccione una divisa</string>
+        <string name="enter_amount">Ingrese el monto</string>
+        <string name="convert">Convertir</string>
+        <string name="reset">Resetear</string>
+        <string name="from">De:</string>
+        <string name="to">A:</string>
+        <string name="title">Convertor de Divisa</string>
+        <string name="descrip_img">imagen convertor de divisa</string>
+        <string name="result">Resultado</string>
+
+</resources>

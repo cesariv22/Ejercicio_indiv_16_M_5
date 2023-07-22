@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:fontFamily="serif"
+        android:text="@string/title"
+        android:textColor="#0074BD"
+        android:textFontWeight="900"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="121dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/descrip_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:srcCompat="@drawable/img_convertor" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="316dp"
+        android:fontFamily="serif"
+        android:text="@string/from"
+        android:textFontWeight="600"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+
+        android:entries="@array/currencies"
+        android:paddingHorizontal="15dp"
+        android:prompt="@string/select_currency"
+        android:scrollbarSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="serif"
+        android:text="@string/to"
+        android:textFontWeight="600"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerCurrency" />
+
+    <Spinner
+        android:id="@+id/spinnerCurrency2"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:entries="@array/currencies"
+        android:paddingHorizontal="15dp"
+        android:prompt="@string/select_currency"
+        android:scrollbarSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/editTextAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="44dp"
+        android:autofillHints="@string/enter_amount"
+        android:background="@drawable/rounder"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="@string/enter_amount"
+        android:inputType="numberDecimal"
+        android:paddingHorizontal="15dp"
+        android:textColorHint="#92000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/buttonConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#0074BD"
+        android:fontFamily="serif"
+        android:text="@string/convert"
+        app:layout_constraintBottom_toTopOf="@+id/textViewResult"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#0074BD"
+        android:fontFamily="serif"
+        android:text="@string/reset"
+        app:layout_constraintBottom_toTopOf="@+id/textViewResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonConvert" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="104dp"
+        android:background="@drawable/rounder"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal|center_vertical"
+        android:paddingHorizontal="15sp"
+        android:textFontWeight="600"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="@string/result" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
